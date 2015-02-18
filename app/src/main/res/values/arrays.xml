@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_temperature_units_entries">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+    </array>
+    <array name="pref_temperature_units_values">
+        <item>C</item>
+        <item>F</item>
+    </array>
+</resources>
