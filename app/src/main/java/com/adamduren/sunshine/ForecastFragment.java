@@ -86,7 +86,7 @@ public class ForecastFragment extends Fragment {
 
     private void updateWeather() {
         String location = preferences.getString(getString(R.string.pref_location_key), "");
-        String temperature_units = preferences.getString(getString(R.string.pref_temperature_units_key), "");
+        String temperature_units = preferences.getString(getString(R.string.pref_units_key), "");
 
         new FetchWeatherTask().execute(location);
     }
@@ -199,7 +199,7 @@ public class ForecastFragment extends Fragment {
                 // "temp" when working with temperature.  It confuses everybody.
                 JSONObject temperatureObject = dayForecast.getJSONObject(OWM_TEMPERATURE);
 
-                String temperatureUnits = preferences.getString(getString(R.string.pref_temperature_units_key), "C");
+                String temperatureUnits = preferences.getString(getString(R.string.pref_units_key), "C");
 
                 double high = temperatureObject.getDouble(OWM_MAX);
                 double low = temperatureObject.getDouble(OWM_MIN);
